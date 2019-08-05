@@ -1,0 +1,50 @@
+<html>
+	<head>    
+        <title>Todo</title>
+        <link href="https://fonts.googleapis.com/css?family=Allura|Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="reset.css">	
+        <link rel="stylesheet" href="todo.css">
+        <script src="todo.js"></script>
+	</head>
+
+	<body>
+            <header>
+                <a href="home.html" class="home"><h6>Systemize</h6></a>
+            </header>
+    
+            <main>
+                <div class="logincontainer">
+                    <div id="form">
+                        <input type="button" value="Create" class="button" onclick="location.assign('createtodo.html')">
+                        &nbsp;&nbsp;
+                        <input type="button" value='Edit' onclick="edit()" class="button"/>
+                        &nbsp;&nbsp;
+                        <input type="button" value='Save' id="save" onclick="update()" style="display: none" class="button"/>
+                        &nbsp;&nbsp;
+                        <input type="button" value='Mark Done' onclick="done()" class="button"/>
+                        &nbsp;&nbsp;
+                        <input type="button" value='Delete' onclick="deletetodo()" class="button"/>
+                    </div>
+                </div>
+
+                <div class="logincontainer" style="margin-top: 5px">
+                    <div id="form">
+                        <select id="filter" onchange="filter()" class="button">
+                            <option value="">--</option>
+                            <option value="drange">Date Range</option>
+                            <option value="done">Done</option>
+                            <option value="pending">Pending</option>
+                            <option value="rfilter">Remove Filter</option>
+                        </select>
+                        <input type="date" id="fromdate" style="display: none" class="button">
+                        <input type="date" id="todate" style="display: none" class="button">
+                        <input type="button" id="search" value="search" onclick="datefilter()" style="display: none" class="button">
+                    </div>
+                </div>
+
+                <div id="divid">
+                    
+                </div>
+            </main>
+	</body>
+</html>
